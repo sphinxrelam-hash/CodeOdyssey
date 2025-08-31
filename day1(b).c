@@ -1,32 +1,14 @@
 #include <stdio.h>
 int main(){
-
     int x;
-    printf("Enter first Number :");
+    printf("Enter First Number:");
     scanf("%d",&x);
     int y;
-    printf("Enter Second Number :");
+     printf("Enter Second Number:");
     scanf("%d",&y);
-
     int sum = x+y;
-    int diff= x-y;
-    int prod=x*y;
-    
-     printf("Sum:%d\n",sum);
-     printf("Diff:%d\n",diff);
-     printf("Product:%d\n",prod);
-    int Quot;
-      
+    printf("The sum is: %d", sum);
 
-     if (y==0)
-     {
-         printf("Quotient: NOT DEFINED(cannot divide by 0)\n");
-     }
-     else{
-        Quot=x / y;
-        printf("Quotient:%d\n",Quot);
-     }
-     
+    return 0;
 
- return 0;
 }
