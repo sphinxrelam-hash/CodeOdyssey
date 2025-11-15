@@ -16,30 +16,28 @@ int main()
     int number, sum = 0, count = 0;
     float average;
 
-    // Open the file in read mode
     file = fopen("numbers.txt", "r");
     if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    // Read integers from the file and compute sum and count
+    
     while (fscanf(file, "%d", &number) == 1) {
         sum += number;
         count++;
     }
 
-    // Close the file
+  
     fclose(file);
 
-    // Calculate average
+  
     if (count > 0) {
         average = (float)sum / count;
     } else {
         average = 0.0;
     }
 
-    // Print the results
     printf("Sum = %d\n", sum);
     printf("Average = %.2f\n", average);
 

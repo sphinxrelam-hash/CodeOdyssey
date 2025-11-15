@@ -22,18 +22,14 @@ int main()
         return 1;
     }
 
-    // Take user input for the new line of text
     printf("Enter a line of text to append: ");
-    getchar(); // Clear the newline character from previous input
+    getchar(); 
     fgets(line, sizeof(line), stdin);
 
-    // Append the text to the file
     fputs(line, file);
 
-    // Close the file
     fclose(file);
 
-    // Confirm that the text was appended successfully
     printf("File updated successfully with appended text.\n");
 
     return 0;

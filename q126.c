@@ -21,18 +21,18 @@ int main()
     char filename[100];
     char ch;
 
-    // Ask the user for a filename
+  
     printf("Enter the filename: ");
     scanf("%s", filename);
 
-    // Try to open the file in read mode
+
     file = fopen(filename, "r");
     if (file == NULL) {
         printf("Error: File does not exist!\n");
         return 1;
     }
 
-    // If file opened successfully, read and display its content
+    
     printf("File opened successfully. Content:\n");
     while ((ch = fgetc(file)) != EOF) {
         putchar(ch);

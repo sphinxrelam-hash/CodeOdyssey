@@ -18,14 +18,14 @@ int main()
     int characters = 0, words = 0, lines = 0;
     int in_word = 0;
 
-    // Open the file in read mode
+ 
     file = fopen("sample.txt", "r");
     if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    // Read the file character by character
+
     while ((ch = fgetc(file)) != EOF) {
         characters++;
 
@@ -34,24 +34,23 @@ int main()
         }
 
         if (ch == ' ' || ch == '\n' || ch == '\t') {
-            in_word = 0; // Outside a word
+            in_word = 0; 
         } else {
             if (in_word == 0) {
-                words++; // Start of a new word
-                in_word = 1; // Inside a word
+                words++; 
+                in_word = 1; 
             }
         }
     }
 
-    // If the file is not empty, count the last line if it doesn't end with a newline
     if (characters > 0 && ch != '\n') {
         lines++;
     }
 
-    // Close the file
+   
     fclose(file);
 
-    // Print the results
+    
     printf("Characters: %d\n", characters);
     printf("Words: %d\n", words);
     printf("Lines: %d\n", lines);

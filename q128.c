@@ -17,29 +17,28 @@ int main()
     char ch;
     int vowels = 0, consonants = 0;
 
-    // Open the file in read mode
+    
     file = fopen("text.txt", "r");
     if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    // Read the file character by character
+    
     while ((ch = fgetc(file)) != EOF) {
-        if (isalpha(ch)) { // Check if the character is an alphabet
-            ch = tolower(ch); // Convert to lowercase for uniformity
+        if (isalpha(ch)) { // 
+            ch = tolower(ch);
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                vowels++; // Increment vowel count
+                vowels++;
             } else {
-                consonants++; // Increment consonant count
+                consonants++; 
             }
         }
     }
 
-    // Close the file
+
     fclose(file);
 
-    // Print the results
     printf("Vowels: %d\n", vowels);
     printf("Consonants: %d\n", consonants);
 

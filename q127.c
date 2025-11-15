@@ -15,14 +15,13 @@ int main()
     FILE *inputFile, *outputFile;
     char ch;
 
-    // Open the input file in read mode
     inputFile = fopen("input.txt", "r");
     if (inputFile == NULL) {
         printf("Error opening input file!\n");
         return 1;
     }
 
-    // Open the output file in write mode
+   
     outputFile = fopen("output.txt", "w");
     if (outputFile == NULL) {
         printf("Error opening output file!\n");
@@ -30,16 +29,15 @@ int main()
         return 1;
     }
 
-    // Read from input file, convert to uppercase, and write to output file
     while ((ch = fgetc(inputFile)) != EOF) {
         fputc(toupper(ch), outputFile);
     }
 
-    // Close both files
+
     fclose(inputFile);
     fclose(outputFile);
 
-    // Confirm that the operation was successful
+
     printf("Text converted to uppercase and written to output.txt successfully.\n");
 
     return 0;

@@ -23,16 +23,16 @@ We Are Going To Look At 26 Different Test Cases.
 #include <string.h>
 
 void to_sentence_case(char* str) {
-    int capitalize = 1; // Flag to indicate if we should capitalize the next character
+    int capitalize = 1; 
 
     for (int i = 0; str[i] != '\0'; i++) {
         if (isspace(str[i])) {
-            capitalize = 1; // Next character should be capitalized
+            capitalize = 1; 
         } else if (capitalize && isalpha(str[i])) {
-            str[i] = toupper(str[i]); // Capitalize the character
-            capitalize = 0; // Reset the flag
+            str[i] = toupper(str[i]); 
+            capitalize = 0; 
         } else {
-            str[i] = tolower(str[i]); // Convert to lowercase
+            str[i] = tolower(str[i]); 
         }
     }
 }
@@ -42,7 +42,7 @@ int main() {
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
-    // Remove newline character if present
+    
     int n = strlen(str);
     if (str[n - 1] == '\n') {
         str[n - 1] = '\0';

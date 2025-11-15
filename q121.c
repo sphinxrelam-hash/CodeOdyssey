@@ -15,26 +15,23 @@ int main()
     char name[100];
     int age;
 
-    // Open the file in write mode
+    
     file = fopen("info.txt", "w");
     if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    // Take user input for name and age
     printf("Enter your name: ");
     fgets(name, sizeof(name), stdin);
     printf("Enter your age: ");
     scanf("%d", &age);
 
-    // Write the data to the file
     fprintf(file, "Name: %sAge: %d\n", name, age);
 
-    // Close the file
     fclose(file);
 
-    // Confirm that data was written successfully
+    
     printf("File created successfully! Data written to info.txt\n");
 
     return 0;

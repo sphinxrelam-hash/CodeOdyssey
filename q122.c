@@ -15,19 +15,18 @@ int main()
     FILE *file;
     char line[200];
 
-    // Open the file in read mode
     file = fopen("info.txt", "r");
     if (file == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
 
-    // Read and print each line until EOF
+    
     while (fgets(line, sizeof(line), file) != NULL) {
         printf("%s", line);
     }
 
-    // Close the file
+    
     fclose(file);
 
     return 0;
